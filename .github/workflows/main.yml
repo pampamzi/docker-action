@@ -6,9 +6,8 @@ jobs:
     name: A job to say hello
     steps:
       - name: set permissions
-        run: |
-          cd / 
-          chmod +x entrypoint.sh
+        run: 
+          chmod +x /docker-action/entrypoint.sh
           
       - name: Hello world action step
         id: hello
