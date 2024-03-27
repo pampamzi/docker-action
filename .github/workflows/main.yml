@@ -7,8 +7,8 @@ jobs:
     steps:
       - name: set permissions
         run: |
-          chmod +x /entrypoint.sh
-          ls -l entrypoint.sh
+          cd / 
+          chmod +x entrypoint.sh
           
       - name: Hello world action step
         id: hello
