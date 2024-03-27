@@ -7,12 +7,8 @@ jobs:
     steps:
       - name: set permissions
         run: |
-          git add entrypoint.sh
-          git update-index --chmod=+x entrypoint.sh
-      - name: see permissions
-        run: 
-          git ls-files --stage entrypoint.sh
-
+          chmod=+x entrypoint.sh
+          ls -l entrypoint.sh
           
       - name: Hello world action step
         id: hello
