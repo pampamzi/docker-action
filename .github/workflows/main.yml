@@ -5,6 +5,15 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
+      - name: set permissions
+        run: |
+          git add entrypoint.sh
+          git update-index --chmod=+x entrypoint.sh
+      - name: see permissions
+        run: 
+          git ls-files --stage entrypoint.sh
+
+          
       - name: Hello world action step
         id: hello
         uses: pampamzi/docker-action@main
